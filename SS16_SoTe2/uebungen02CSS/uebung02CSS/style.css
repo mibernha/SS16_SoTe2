@@ -1,0 +1,22 @@
+html {
+	background-color: #6699ff;
+}
+
+#img01 {
+	position: absolute;
+	right: 50px;
+	top: 50px;	
+}
+
+tr th {
+	background-color: #000000;
+	color: #53ff1a;
+}
+
+h3 {
+	text-transform: uppercase;
+}
+
+#text01 {
+	color: red;
+}

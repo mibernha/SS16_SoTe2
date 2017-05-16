@@ -1,0 +1,13 @@
+{
+	"Hochschule":"HTWG",
+	"Studenten":[
+		{
+			"vorname":"Max",
+			"nachname":"Mustermann"
+		},
+		{
+			"vorname":"Martina",
+			"nachname":"Musterfrau"
+		}
+	]
+}

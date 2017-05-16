@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="html5.js"></script>
+    <script src="callback.js"></script>
+</head>
+<body>
+	<input type="text" id="feld1" placeholder="Textfeld1"/>
+	<input type="text" id="feld2" placeholder="Textfeld2"/>
+	<button onclick="save()">In Web Storage speichern</button>
+	<button onclick="load()">Aus Web Storage laden</button>
+	<div>Position:</div>
+	<p id="location"></p>
+	<button onclick="getLocation()">Position bestimmen</button>
+	
+	<button onclick="start()">Callbacks!</button>
+</body>
+</html>

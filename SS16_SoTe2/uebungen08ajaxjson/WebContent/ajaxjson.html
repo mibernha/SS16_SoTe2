@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax und JSON</title>
+<script type="text/javascript" src="./js/jquery-2.2.3.js"></script>
+</head>
+<body>
+	<h1>Namensvervollständigung:</h1>
+	<input type="text" placeholder="Max" id="input01" name="name">
+	<button id="button01">AutoComplete</button>
+	<button id="button02">JSON einfügen</button>
+	<div id="output01">Hier entsteht gleich JSON Text!</div>
+	<script type="text/javascript">
+	$("#button01").click(function(){
+		$.ajax(
+			{
+			url: "/uebungen08ajaxjson/autocomplete",
+			data: { name: document.getElementById("input01").value },
+			success: function(result){
+				document.getElementById("input01").value = result;
+			}
+		});
+	});
+	$("#button02").click(function(){
+		$.ajax(
+			{
+			url: "./files/json.json",
+			dataType: "json",
+			success: function(json){
+				var out = "<ul>";
+				$.each(json.Studenten, function(){
+					out += "<li>" + this['nachname'] + ", " + this['vorname'] + "</li>";
+				});
+				out += "</ul>";
+				$("#output01").html(out);
+			}
+		});
+	});
+	</script>
+</body>
+</html>
